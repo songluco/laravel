@@ -26,4 +26,18 @@ class User extends Authenticatable
     protected $hidden = [
         'password', 'remember_token',
     ];
+
+    /**
+     * admin  middleware 中用于验证登录用户是否为admin的方法
+     * 注意：属伪代码
+     *
+     * @return bool
+     * @author: SongLu
+     */
+    public function isAdmin()
+    {
+        return true;
+    }
+
+
 }
