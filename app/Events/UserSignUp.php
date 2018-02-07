@@ -23,6 +23,7 @@ class UserSignUp
      */
     public function __construct(User $user)
     {
+        //构造方法传入的参数，可以在监听类中使用
         $this->user = $user;
     }
 
