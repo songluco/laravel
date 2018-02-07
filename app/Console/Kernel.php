@@ -15,6 +15,7 @@ class Kernel extends ConsoleKernel
     protected $commands = [
         //
         \App\Console\Commands\ThinkCalculate::class,
+        \App\Console\Commands\LogInfo::class,
         \App\Console\Commands\Calculate\AdvanceAbout::class,
     ];
 
@@ -28,6 +29,8 @@ class Kernel extends ConsoleKernel
     {
         // $schedule->command('inspire')
         //          ->hourly();
+        $schedule->command('command:log')->everyMinute();
+        $schedule->command('Calculate:AdvanceAbout')->everyMinute();
     }
 
     /**

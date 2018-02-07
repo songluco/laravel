@@ -11,7 +11,8 @@ class AdvanceAbout extends Command
      *
      * @var string
      */
-    protected $signature = 'Calculate:AdvanceAbout {principal} {interestRate=0.2}';
+    protected $signature = 'Calculate:AdvanceAbout {principal?}'; //principal参数可选
+//    protected $signature = 'Calculate:AdvanceAbout {principal} {interestRate=0.2}'; //principal参数必填，interestRate参数可选，且默认值为0.2
 
     /**
      * The console command description.
@@ -37,7 +38,6 @@ class AdvanceAbout extends Command
      */
     public function handle()
     {
-        $result = $this->argument('principal') * $this->argument('interestRate');
-        dd($result);
+        \Log::info('what do you mean ?');
     }
 }
