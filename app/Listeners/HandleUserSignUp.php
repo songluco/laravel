@@ -33,7 +33,6 @@ class HandleUserSignUp
         //因为Carbon已经本地化，所以这里显示的是中文简体信息
         dump($event->user->created_at->diffForHumans(Carbon::now(), true));
 
-
         //依赖注入的filesystem
         dump($this->filesystem->get('/Users/songlu/codecasts/laravel/cron.txt'));
 

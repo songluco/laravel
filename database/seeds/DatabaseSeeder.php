@@ -11,6 +11,8 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        // $this->call(UsersTableSeeder::class);
+        //删除表中所有数据，同时重置自增长ID
+        //DB::table('users')->truncate();
+        $this->call(UsersTableSeeder::class);
     }
 }
