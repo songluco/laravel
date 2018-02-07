@@ -14,5 +14,7 @@ class DatabaseSeeder extends Seeder
         //删除表中所有数据，同时重置自增长ID
         //DB::table('users')->truncate();
         $this->call(UsersTableSeeder::class);
+        $this->call(LessonsTableSeeder::class);
+        $this->call(PostsTableSeeder::class);
     }
 }
