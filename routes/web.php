@@ -14,7 +14,8 @@
 //\Auth::loginUsingId(2); //使用 loginUsingId 方法通过其 ID 将用户记录到应用中
 Route::get('/', function () {
     \Auth::loginUsingId(1);
-//    $model = new \App\Events\UserSignUp(\Auth::user());
+
+    //这里演示事件的使用
     event(new \App\Events\UserSignUp(\Auth::user()));
     return view('welcome');
 });
