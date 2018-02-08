@@ -25,3 +25,9 @@ Route::group(['prefix' => 'admin', 'middleware' => 'admin'], function(){
         return 'you are a admin! give you a pass card!';
     });
 });
+
+Route::group(['prefix' => 'admin'], function(){
+    Route::get('/song', function(){
+        return view('SongLu');
+    });
+});
